@@ -1,12 +1,14 @@
 import { auth, provider } from '../../config/firebase-config'
 import { signInWithPopup } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
+
 import './styles.css'
 
+
 export const Auth = () => {
-
+;
   const navigate = useNavigate();
-
+  
   const signInWithGoogle = async () => {
     try {
       const results = await signInWithPopup(auth, provider);
@@ -29,4 +31,8 @@ export const Auth = () => {
       <button className="login-with-google-btn" onClick={signInWithGoogle}>Sign in With Google</button>
     </div>
   )
+
+
+
+
 }

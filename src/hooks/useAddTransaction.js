@@ -20,6 +20,7 @@ export const useAddTransaction = () => {
             createdAt: serverTimestamp(),
         });
         console.log('Added transaction to transaction collection!');
+        alert(`Added transaction to transaction collection! ${description}: ${transactionAmount}`);
     };
     return { addTransaction };
 }
